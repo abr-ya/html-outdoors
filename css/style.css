@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
 }
 
 .header {
@@ -45,6 +44,8 @@ body {
 .heading-primary {
   color: white;
   text-transform: uppercase;
+
+  backface-visibility: hidden; /* animation bug fix */
 }
 
 .heading-primary-main {
@@ -53,11 +54,50 @@ body {
   letter-spacing: 35px;
 
   animation-name: moveInLeft;
-  animation-duration: 3s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
 }
 
 .heading-primary-text {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.5px;
+
+  /* name - duration - timing function */
+  animation: moveInRight 1s ease-in;
 }
+
+
+/* Animation */
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+
+	80% {
+		transform: translate(30px, 30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(200px);
+	}
+
+	80% {
+		transform: translate(-30px, -30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+/* /Animation */
