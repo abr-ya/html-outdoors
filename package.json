@@ -4,8 +4,9 @@
   "description": "Outdoors landing project: html, sass, js",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass ./src/scss/main.scss ./docs/css/style.css -w",
-    "dev": "live-server --open=./docs/ --watch=./docs/"
+    "sass": "node-sass ./src/scss/main.scss ./docs/css/style.css -w",
+    "server": "live-server --open=./docs/ --watch=./docs/",
+    "start": "concurrently --names \"SASS,SERVER\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run sass\" \"npm run server\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/abr-ya/html-outdoors#readme",
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "live-server": "^1.2.2",
     "node-sass": "^7.0.1"
   }
