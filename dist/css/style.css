@@ -1,14 +1,15 @@
+@charset "UTF-8";
+/* COLORS */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
-  font-size: 10px; /* root font size! */
-}
+  font-size: 10px;
+  /* root font size! */ }
 
 body {
   font-family: "Lato", sans-serif;
@@ -16,66 +17,52 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .header {
   height: 95vh;
-  background-image:
-    linear-gradient(to right bottom, #7ed56fbb, #28b485bb),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
 .header__logo {
-  height: 3.5rem;
-}
+  height: 3.5rem; }
 
 .header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center; }
 
 .heading-primary {
   color: white;
   text-transform: uppercase;
-
-  backface-visibility: hidden; /* animation bug fix */
-  margin-bottom: 6rem;
-}
+  backface-visibility: hidden;
+  /* animation bug fix */
+  margin-bottom: 6rem; }
 
 .heading-primary--main {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-
   animation-name: moveInLeft;
   animation-duration: 1s;
-  animation-timing-function: ease-in;
-}
+  animation-timing-function: ease-in; }
 
 .heading-primary--text {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
-
   /* name - duration - timing function */
-  animation: moveInRight 1s ease-in;
-}
+  animation: moveInRight 1s ease-in; }
 
 .btn {
   cursor: pointer;
@@ -84,29 +71,24 @@ body {
   border: none;
   border-radius: 100px;
   transition: all .3s;
-
-  position: relative;
-}
+  position: relative; }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
-}
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-}
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
 
 .btn--white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
 
 .btn--animated {
   animation: moveFromBottom .5s ease-in .5s;
-  animation-fill-mode: backwards; /* применяем нулнвой фрейм до старта анимации) */
-}
+  animation-fill-mode: backwards;
+  /* применяем нулнвой фрейм до старта анимации) */ }
 
 .btn::after {
   content: "";
@@ -114,66 +96,47 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 100px;
-
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-
-  transition: all .4s;
-}
+  transition: all .4s; }
 
 .btn:hover::after {
   transform: scaleX(1.5) scaleY(1.4);
-  opacity: 0;
-}
+  opacity: 0; }
 
 .btn-white::after {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 /* Animation */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-200px);
-  }
-
+    transform: translateX(-200px); }
   80% {
-    transform: translate(30px, 30px);
-  }
-
+    transform: translate(30px, 30px); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(200px);
-  }
-
+    transform: translateX(200px); }
   80% {
-    transform: translate(-30px, -30px);
-  }
-
+    transform: translate(-30px, -30px); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(200px);
-  }
-
+    transform: translateY(200px); }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
+
 /* /Animation */

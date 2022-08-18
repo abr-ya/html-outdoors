@@ -1,0 +1,25 @@
+{
+  "name": "html-outdoors",
+  "version": "1.0.0",
+  "description": "Outdoors landing project: html, sass, js",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass ./src/scss/main.scss ./dist/css/style.css -w",
+    "dev": "live-server --open=./dist/ --watch=./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abr-ya/html-outdoors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abr-ya/html-outdoors/issues"
+  },
+  "homepage": "https://github.com/abr-ya/html-outdoors#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^7.0.1"
+  }
+}
