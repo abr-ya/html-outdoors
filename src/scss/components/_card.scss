@@ -1,0 +1,119 @@
+.card {
+  // Rotate and colors
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+    transition: 0.8s all ease;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden; // fix inner img radius)
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 { background-image: $gradient-card-green; }
+      &-2 { background-image: $gradient-card-orange; }
+      &-3 { background-image: $gradient-card-blue; }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // Front side
+  &__picture {
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 { background-image: $gradient-card-green, url(../img/just12.jpg); }
+    &--2 { background-image: $gradient-card-orange, url(../img/just13.jpg); }
+    &--3 { background-image: $gradient-card-blue, url(../img/just14.jpg); }
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 60%;
+    text-align: right;
+  }
+
+  &__heading-span {
+    padding: .5rem;
+    -webkit-box-decoration-break: clone; // fix string breaks paddings
+    box-decoration-break: clone;
+
+    &--1 { background-image: $gradient-card-green60; }
+    &--2 { background-image: $gradient-card-green60; }
+    &--3 { background-image: $gradient-card-green60; }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  // Back side
+  &__cta {
+    flex-direction: column;
+    height: 100%;
+    padding: 3rem;
+    justify-content: space-evenly;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 200;
+  }
+}

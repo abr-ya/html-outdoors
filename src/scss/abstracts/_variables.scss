@@ -3,12 +3,27 @@ $color-primary: #7ed56f;
 $color-primary-light: #55c57a;
 $color-primary-dark: #28b485;
 
+$color-orange-light: #ffb900;
+$color-orange-dark: #ff7730;
+
+$color-blue-light: #2998ff;
+$color-blue-dark: #5643fa;
+
 $color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
 
 $gradient-primary: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+$gradient-card-green: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+$gradient-card-orange: linear-gradient(to right bottom, $color-orange-light, $color-orange-dark);
+$gradient-card-blue: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+// with opacity
+$gradient-card-green60: linear-gradient(to right bottom, rgba($color-primary-light, .6), rgba($color-primary-dark, .6));
+$gradient-card-orange80: linear-gradient(to right bottom, rgba($color-orange-light, .6), rgba($color-orange-dark, .6));
+$gradient-card-blue80: linear-gradient(to right bottom, rgba($color-blue-light, .6), rgba($color-blue-dark, .6));
 
 // FONT
 $default-font-size: 1.6rem;
