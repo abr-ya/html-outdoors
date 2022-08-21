@@ -46,9 +46,9 @@
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-    &--1 { background-image: $gradient-card-green, url(../img/just12.jpg); }
-    &--2 { background-image: $gradient-card-orange, url(../img/just13.jpg); }
-    &--3 { background-image: $gradient-card-blue, url(../img/just14.jpg); }
+    &--1 { background-image: $gradient-card-green, url(../img/card1.jpg); }
+    &--2 { background-image: $gradient-card-orange, url(../img/card1.jpg); }
+    &--3 { background-image: $gradient-card-blue, url(../img/card1.jpg); }
   }
 
   &__heading {
