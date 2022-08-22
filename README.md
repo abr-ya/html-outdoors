@@ -19,6 +19,7 @@ Outdoors, цели:
 
 ## history
 - [20.08.2022 Add Tours section](https://abr-ya.github.io/html-outdoors/history/20220820/)
+- [22.08.2022 Add Footer](https://abr-ya.github.io/html-outdoors/history/20220822/)
 
 ## для автоматизации
 - live-server - обновление страницы при сохранении,
