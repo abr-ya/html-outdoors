@@ -6,20 +6,21 @@ Outdoors, цели:
 - разобраться с Sass,
 - освежить BEM,
 - использовать разные CSS-эффекты, анимации,
-- сделать адаптив,
+- сделать адаптив.
 
-в перспективе может быть:
-- перенести на React
+В перспективе может быть:
+- перенести на React,
 - подумать про бэк)
 
 ## deploy
 Размещается на gh-pages, переключен на ветку master, папку docs:
 
-[link](https://abr-ya.github.io/html-outdoors/)
+[gh-pages](https://abr-ya.github.io/html-outdoors/)
 
 ## history
 - [20.08.2022 Add Tours section](https://abr-ya.github.io/html-outdoors/history/20220820/)
 - [22.08.2022 Add Footer](https://abr-ya.github.io/html-outdoors/history/20220822/)
+- [24.08.2022 Add Modal - finish Desktop](https://abr-ya.github.io/html-outdoors/history/20220822/)
 
 ## для автоматизации
 - live-server - обновление страницы при сохранении,
